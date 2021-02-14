@@ -1,0 +1,27 @@
+<p>user works!</p>
+<div class="container">
+  <h2>User Table:</h2>         
+  <table  *ngIf = "users.length > 1">
+    <thead>
+      <tr [class.headerRow] = true>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Phone</th>
+        <th>Email</th>
+        <th>Username</th>
+        <th>Website</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor = "let user of users; let i = index; let even = even; let odd = odd" 
+      [class.evenRow] = "even" [class.oddRow] = "odd">
+        <td>{{user.id}}</td>
+        <td>{{user.name}}</td>
+        <td>{{user.phone}}</td>
+        <td>{{user.email}}</td>
+        <td>{{user.username}}</td>
+        <td>{{user.website}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

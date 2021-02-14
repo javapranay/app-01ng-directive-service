@@ -1,0 +1,26 @@
+<div>
+    <h2>Todos Table:</h2>         
+    <table  *ngIf = "todos.length > 1">
+      <thead>
+        <tr [class.headerRow] = true>
+          <th>UserId</th>
+          <th>id</th>
+          <th>Title</th>
+          <th>Completed</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor = "let todo of todos; let i = index; let even = even; let odd = odd" 
+        [class.evenRow] = "even" [class.oddRow] = "odd">
+          <td>{{todo.userId}}</td>
+          <td>{{todo.id}}</td>
+          <td>{{todo.title | titlecase}}</td>
+          <td [ngSwitch] = "todo.completed">
+            <span *ngSwitchCase = true>Completed</span>
+            <span *ngSwitchCase = false>Not Completed</span>
+            <span *ngSwithDefault>NA</span>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>

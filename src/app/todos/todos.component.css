@@ -1,0 +1,14 @@
+.headerRow{
+    background-color: dimgray;
+    color: black;
+}
+
+.oddRow{
+    background-color: darkgrey;
+    color: black;
+}
+
+.evenRow{
+    background-color: white;
+    color: black;
+}
